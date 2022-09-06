@@ -103,16 +103,24 @@ test(cats);
 
 // Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container.
 
-const catCreator = document.querySelector(".cat-container");
-
 function createCats(cats) {
+  let createHtml = "";
+
   for (let i = 0; i < cats.length; i++) {
-    //  (catCreator.innerHTML = cats);
-    catCreator.innerHTML += `
-    <div>${JSON.stringify(cats)}</div>
-    <h5>${cats[i].name}</h5>
-    <p>${cats[i].age}</p>;`;
+    let unknownAge = "age unknown";
+
+    if (cats[i].age) {
+      unknownAge = cats[i].age;
+    }
+
+    createHtml += `<div>
+                    <h5>Name: ${cats[i].name}</h5>
+                    <p>Age ${unknownAge}</p>
+                   </div>`;
   }
+  return createHtml;
 }
 
-createCats(cats);
+const catCreator = document.querySelector(".cat-container");
+
+catCreator.innerHTML = createCats(cats);
