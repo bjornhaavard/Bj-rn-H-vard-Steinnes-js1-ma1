@@ -34,7 +34,7 @@ cat.complain();
 
 const heading = document.querySelector("h3");
 
-heading.innerText = "Updated heading";
+heading.innerHTML = "Updated heading";
 
 // Question 3:
 
