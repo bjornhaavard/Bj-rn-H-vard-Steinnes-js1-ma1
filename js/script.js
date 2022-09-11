@@ -80,13 +80,13 @@ resultsContainer.innerHTML = `
 
 // Call the function and pass in the cats variable in the script.js file in the repo.
 
-function test(list) {
-  for (let i = 0; i < test.length; i++) {
+function whatDoesTheCatSay(list) {
+  for (let i = 0; i < whatDoesTheCatSay.length; i++) {
     console.log(list);
   }
 }
 
-test(cats);
+whatDoesTheCatSay(cats);
 // Question 8:
 
 // Create a function called createCats. The function will have one parameter called cats.
